@@ -1,21 +1,31 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'modules/pages.dart';
 
 class AppModule extends Module {
+  final newBody = Center(
+    child: ElevatedButton(
+      onPressed: () => Modular.to.navigate('/board'),
+      child: const Text('Navigate to board Page'),
+    ),
+  );
   //
-/*   @override
-  List<Bind> get binds => []; */
+  @override
+  List<Bind> get binds => [];
   //
   @override
   List<ModularRoute> get routes => [
         //
         ChildRoute(
           '/',
-          child: (context, args) => const HomePage(),
+          child: (context, args) => HomePage(
+            body: newBody,
+            title: 'Secretaria',
+          ),
         ),
-/*         //
-        ChildRoute(
+        //
+/*         ChildRoute(
           '/auth',
           child: (context, args) => AuthPage(
             Person.fromMap(
@@ -26,14 +36,14 @@ class AppModule extends Module {
               },
             ),
           ),
-        ),
+        ), */
         //
-        ChildRoute(
+/*         ChildRoute(
           '/form',
           child: (context, args) => const FormPage(),
-        ),
+        ), */
         //
-        ChildRoute(
+/*         ChildRoute(
           '/list/persons',
           child: (context, args) => const EntityList(params: [
             EntityListParams(
@@ -49,9 +59,9 @@ class AppModule extends Module {
             EntityListParams(title: 't3', subtitle: 'st3', navigateTo: ''),
             EntityListParams(title: 't4', subtitle: 'st4', navigateTo: ''),
           ]),
-        ),
+        ), */
         //
-        ChildRoute(
+/*         ChildRoute(
           '/board',
           child: (context, args) => const EntityBoard(
             params: [

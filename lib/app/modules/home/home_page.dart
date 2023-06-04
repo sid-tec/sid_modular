@@ -1,20 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends DefaultPage {
+  const HomePage(
+      {super.key,
+      super.title,
+      super.body = const Center(
+        child: Text("XXXX"),
+      )});
+}
+
+class DefaultPage extends StatelessWidget {
+  final String title;
+  final Widget body;
+
+  const DefaultPage(
+      {super.key,
+      this.title = 'S!D TEC ORG',
+      this.body = const Center(
+        child: Text('____'),
+      )});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home Page')),
+      appBar: AppBar(
+          title: Text(title),
+          backgroundColor: const Color.fromARGB(255, 18, 68, 109)),
       //body: const TestForm(),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () => Modular.to.navigate('/board'),
-          child: const Text('Navigate to board Page'),
-        ),
-      ),
+      body: body,
     );
   }
 }
