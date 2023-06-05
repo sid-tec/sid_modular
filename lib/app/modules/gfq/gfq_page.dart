@@ -21,7 +21,7 @@ class _GfqPageState extends State<GfqPage> {
                 Image.asset(
                   'assets/uff.PNG',
                   width: 70,
-                  height: 20,
+                  height: 40,
                   fit: BoxFit.cover,
                 ),
                 const SizedBox(
@@ -31,14 +31,14 @@ class _GfqPageState extends State<GfqPage> {
               ],
             ),
           ),
-          backgroundColor: const Color.fromARGB(255, 18, 68, 109)),
+          backgroundColor: const Color.fromARGB(255, 0, 74, 173)),
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
           setState(() {
             currentPageIndex = index;
           });
         },
-        backgroundColor: const Color.fromARGB(255, 18, 68, 109),
+        backgroundColor: const Color.fromARGB(255, 0, 74, 173),
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
