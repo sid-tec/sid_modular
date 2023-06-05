@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import 'modules/gfq/gfq_page.dart';
 import 'modules/pages.dart';
 
 class AppModule extends Module {
@@ -23,6 +24,10 @@ class AppModule extends Module {
             body: newBody,
             title: 'Secretaria',
           ),
+        ),
+        ChildRoute(
+          '/gfq',
+          child: (context, args) => const GfqPage(),
         ),
         //
 /*         ChildRoute(

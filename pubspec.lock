@@ -203,7 +203,7 @@ packages:
   sid_d_d:
     dependency: "direct main"
     description:
-      path: "C:/DEVS/sid_d_d"
+      path: "D:/DEVS/sid_d_d"
       relative: false
     source: path
     version: "3.0.0"
@@ -285,5 +285,5 @@ packages:
     source: hosted
     version: "2.1.4"
 sdks:
-  dart: ">=3.0.3 <4.0.0"
+  dart: ">=3.0.2 <4.0.0"
   flutter: ">=3.3.0"
