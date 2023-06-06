@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:sid_modular/app/modules/login/login_page.dart';
 
 import 'modules/gfq/gfq_page.dart';
 import 'modules/pages.dart';
@@ -19,7 +20,7 @@ class AppModule extends Module {
   List<ModularRoute> get routes => [
         //
         ChildRoute(
-          '/',
+          '/teste',
           child: (context, args) => HomePage(
             body: newBody,
             title: 'Secretaria',
@@ -28,6 +29,10 @@ class AppModule extends Module {
         ChildRoute(
           '/gfq',
           child: (context, args) => const GfqPage(),
+        ),
+        ChildRoute(
+          '/',
+          child: (context, args) => const LoginPage(),
         ),
         //
 /*         ChildRoute(
