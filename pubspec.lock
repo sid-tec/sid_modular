@@ -200,6 +200,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  secretaria:
+    dependency: "direct main"
+    description:
+      path: "D:/DEVS/secretaria"
+      relative: false
+    source: path
+    version: "1.0.0"
   sid_d_d:
     dependency: "direct main"
     description:

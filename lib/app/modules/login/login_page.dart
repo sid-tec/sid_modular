@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
             Image.asset(
               'assets/brasao.png',
               width: 100,
-              height: 300,
+              height: 250,
               //fit: BoxFit.cover,
             ),
             Container(
@@ -50,13 +50,13 @@ class _LoginPageState extends State<LoginPage> {
                   'Entrar no Sistema',
                   style: TextStyle(fontSize: 20),
                 )),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: const TextField(
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: TextField(
                 //controller: nameController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'User Name',
+                  labelText: 'Usuário',
                 ),
               ),
             ),
@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 //controller: passwordController,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  labelText: 'Password',
+                  labelText: 'Senha',
                 ),
               ),
             ),
@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
                   child: const Text('Entrar'),
-                  onPressed: () => Modular.to.navigate('/gfq'),
+                  onPressed: () => Modular.to.navigate('/secretaria'),
                 )),
           ],
         ),

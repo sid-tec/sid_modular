@@ -27,7 +27,7 @@ class AppModule extends Module {
           ),
         ),
         ChildRoute(
-          '/gfq',
+          '/secretaria',
           child: (context, args) => const GfqPage(),
         ),
         ChildRoute(

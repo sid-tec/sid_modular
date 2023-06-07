@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sid_modular/app/modules/gfq/contatos.dart';
 
 class GfqPage extends StatefulWidget {
   const GfqPage({super.key});
@@ -42,15 +43,15 @@ class _GfqPageState extends State<GfqPage> {
         selectedIndex: currentPageIndex,
         destinations: const <NavigationDestination>[
           NavigationDestination(
-            selectedIcon: Icon(Icons.person_2_outlined),
-            icon: Icon(Icons.person_2),
-            label: 'Perfil',
-          ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.explore_outlined),
-            icon: Icon(Icons.explore),
+            selectedIcon: Icon(Icons.person),
+            icon: Icon(Icons.person_sharp),
             label: 'Contatos',
           ),
+/*           NavigationDestination(
+            selectedIcon: Icon(Icons.explore_outlined),
+            icon: Icon(Icons.explore),
+            label: 'D',
+          ), */
           NavigationDestination(
             selectedIcon: Icon(Icons.reduce_capacity_outlined),
             icon: Icon(Icons.reduce_capacity),
@@ -72,13 +73,13 @@ class _GfqPageState extends State<GfqPage> {
         Container(
           color: Colors.black,
           alignment: Alignment.center,
-          child: const Text('Perfil'),
+          child: const Contatos(),
         ),
-        Container(
+/*         Container(
           color: Colors.blueGrey,
           alignment: Alignment.center,
           child: const Text('Contatos'),
-        ),
+        ), */
         Container(
           color: Colors.deepPurple,
           alignment: Alignment.center,
