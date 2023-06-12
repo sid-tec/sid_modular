@@ -49,6 +49,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.3"
+  dropdown_textfield:
+    dependency: "direct main"
+    description:
+      name: dropdown_textfield
+      sha256: "6e306d29d4bf8f88e2f9a4336d5e8dcc551d797fa8f541bb52a72817cc275cc4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.8"
   equatable:
     dependency: transitive
     description:
@@ -203,14 +211,14 @@ packages:
   secretaria:
     dependency: "direct main"
     description:
-      path: "D:/DEVS/secretaria"
+      path: "C:/DEVS/secretaria"
       relative: false
     source: path
     version: "1.0.0"
   sid_d_d:
     dependency: "direct main"
     description:
-      path: "D:/DEVS/sid_d_d"
+      path: "C:/DEVS/sid_d_d"
       relative: false
     source: path
     version: "3.0.0"

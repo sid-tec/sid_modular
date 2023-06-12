@@ -1,37 +1,31 @@
-import 'package:flutter/material.dart';
+/* import 'package:flutter/material.dart';
 
 import 'lib.dart';
 
-class Contatos extends StatefulWidget {
-  Contatos({super.key, required this.user});
-
-  final Servidor user;
+class Servidores extends StatefulWidget {
+  const Servidores({super.key});
 
   @override
-  State<Contatos> createState() => _ContatosState();
+  State<Servidores> createState() => _ServidoresState();
 }
 
-class _ContatosState extends State<Contatos> {
+class _ServidoresState extends State<Servidores> {
   @override
   Widget build(BuildContext context) {
-    return const ExpansionPanelListContatos();
+    return const ServidoresListagem();
   }
 }
 
 // ==========================================
 
-class ExpansionPanelListContatos extends StatefulWidget {
-  const ExpansionPanelListContatos({super.key});
+class ServidoresListagem extends StatefulWidget {
+  const ServidoresListagem({super.key});
 
   @override
-  State<ExpansionPanelListContatos> createState() =>
-      _ExpansionPanelListContatosState();
+  State<ServidoresListagem> createState() => _ServidoresListagemState();
 }
 
-// ==========================================
-
-class _ExpansionPanelListContatosState
-    extends State<ExpansionPanelListContatos> {
+class _ServidoresListagemState extends State<ServidoresListagem> {
   final List<Item> _data = items();
 
   @override
@@ -72,11 +66,6 @@ class _ExpansionPanelListContatosState
                 siape: item.serv.siape,
               ),
             ),
-            /* ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('This is a snackbar'))); */
-            /* setState(() {
-                  _data.removeWhere((Item currentItem) => item == currentItem);
-                }); */
           ),
           isExpanded: item.isExpanded,
         );
@@ -88,11 +77,15 @@ class _ExpansionPanelListContatosState
 // ==========================================
 
 List<Item> items() {
-  final servs = Repositories.getServidores();
+  final servs = [];
+  servs.addAll(DadosServidores.values);
+  servs.sort((a, b) => a.curto.compareTo(b.curto));
   //
   var lista = <Item>[];
-  for (Servidor servidor in servs) {
-    ;
+  for (DadosServidores servidor in servs) {
+    var titulo = servidor.titulo.substring(0, 1) == 'p'
+        ? servidor.titulo.replaceAll(RegExp(r'p'), 'P')
+        : servidor.titulo.replaceAll(RegExp(r't'), 'T');
     var value = 'Nome: ${servidor.nome}\n';
     value += 'E-mail: ${servidor.email}\n';
     value += 'SIAPE: ${servidor.siape}\n';
@@ -100,7 +93,7 @@ List<Item> items() {
     value += 'Sala: ${servidor.sala}\n';
     lista.add(Item(
       serv: servidor,
-      headerValue: '${servidor.titulo()} ${servidor.curto}',
+      headerValue: '$titulo ${servidor.curto}',
       expandedValue: value,
     ));
   }
@@ -117,12 +110,8 @@ class Item {
     this.isExpanded = false,
   });
 
-  Servidor serv;
+  DadosServidores serv;
   String expandedValue;
   String headerValue;
   bool isExpanded;
-}
-
-// ==============================
-
-
+} */

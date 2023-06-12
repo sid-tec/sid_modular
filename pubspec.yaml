@@ -12,9 +12,10 @@ dependencies:
     sdk: flutter
   flutter_modular: ^5.0.3
   sid_d_d:
-    path: 'D:/DEVS/sid_d_d'
+    path: 'C:/DEVS/sid_d_d'
   secretaria:
-    path: 'D:/DEVS/secretaria'  
+    path: 'C:/DEVS/secretaria'  
+  dropdown_textfield: ^1.0.8
 
 dev_dependencies:
   flutter_test:
